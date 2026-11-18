@@ -3,18 +3,18 @@
   "brandNameEn": "Gu Zhi Liao",
   "tagline": "把 AI 做成真正能用的数字工具",
   "businessEmail": "lqingli45@gmail.com",
-  "publicBaseUrl": "https://lqingli45-byte.github.io/guzhiliao-website/",
-  "githubRepo": "https://github.com/lqingli45-byte/guzhiliao-website",
-  "status": "official-site-bilingual-pages-complete-not-published",
+  "publicBaseUrl": "https://lqingli45-byte.github.io/guzhiliao-website-preview/",
+  "githubRepo": "https://github.com/lqingli45-byte/guzhiliao-website-preview",
+  "status": "independent-preview-v0.3-bilingual-simulated-not-official",
   "checkoutEnabled": false,
   "firstProduct": {
     "provisionalName": "共读活动工坊",
-    "status": "v0.1-prototype-demo-chinese-experience-not-available-for-purchase",
+    "status": "v0.3-bilingual-simulated-prototype-real-ai-not-connected-not-available-for-purchase",
     "page": "product-gongdu-workshop.html",
     "experienceButton": "reserved-试用演示-Try-the-Demo-not-connected",
     "experienceUrl": null,
     "englishName": "Read-Aloud Activity Workshop",
     "englishPage": "en/product-read-aloud-workshop.html"
   },
-  "notes": "Bilingual Chinese/English official-site pages are a local draft, not published. Language switch is a top-right 中文/English control; first visit follows the browser language; a manual choice is remembered. V0.1 / Prototype Demo uses preset stories and simulated responses; real AI is not officially live. 试用演示 / Try the Demo and purchase buttons stay reserved until a real demo URL and confirmed offer exist. Do not invent prices, billing rules, delivery methods, purchase regions, reviews, or after-sales promises. Do not enable checkout, connect a payment provider, or submit merchant review. This uploaded copy is the independent preview hosted at https://lqingli45-byte.github.io/guzhiliao-website-preview/ and must not be published to the official repository lqingli45-byte/guzhiliao-website."
+  "notes": "This copy is the independent preview at https://lqingli45-byte.github.io/guzhiliao-website-preview/ and must not be published to the official repository lqingli45-byte/guzhiliao-website. Canonical, og:url and publicBaseUrl point only to this preview host. Preview pages use noindex,nofollow and robots.txt Disallow. Current product status is V0.3 bilingual simulated prototype: implemented features use preset stories and simulated responses; real AI is not connected; 试用演示 / Try the Demo and purchase stay reserved. Do not invent prices, billing, quotas, post-purchase access, delivery, purchase regions, or after-sales rules. Do not enable checkout, connect a payment provider, or submit merchant review."
 }

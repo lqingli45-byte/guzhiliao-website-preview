@@ -3,15 +3,15 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Read-Aloud Activity Workshop（共读活动工坊）— Gu Zhi Liao</title>
-  <meta name="description" content="Read-Aloud Activity Workshop is a parent-facing tool for adults who read with children aged 4–6. This English page introduces the product; the first version of the actual tool is provided in Chinese. It is a prototype demo, not a live AI service, and is not available for purchase.">
-  <meta name="robots" content="index,follow">
-  <meta property="og:title" content="Read-Aloud Activity Workshop（共读活动工坊）— Gu Zhi Liao">
-  <meta property="og:description" content="Read-Aloud Activity Workshop is a parent-facing tool for adults who read with children aged 4–6. This English page introduces the product; the first version of the actual tool is provided in Chinese. It is a prototype demo, not a live AI service, and is not available for purchase.">
+  <title>Read-Aloud Activity Workshop（共读活动工坊）— V0.3 bilingual simulated prototype — Gu Zhi Liao</title>
+  <meta name="description" content="Read-Aloud Activity Workshop is a parent-facing tool for adults who read with children aged 4–6. The current V0.3 version is a bilingual simulated prototype: it already includes preset stories, simulated responses, and the “How did your child respond?” flow. Real AI is not connected, and the product is not available for purchase.">
+  <meta name="robots" content="noindex,nofollow">
+  <meta property="og:title" content="Read-Aloud Activity Workshop（共读活动工坊）— V0.3 bilingual simulated prototype — Gu Zhi Liao">
+  <meta property="og:description" content="Read-Aloud Activity Workshop is a parent-facing tool for adults who read with children aged 4–6. The current V0.3 version is a bilingual simulated prototype: it already includes preset stories, simulated responses, and the “How did your child respond?” flow. Real AI is not connected, and the product is not available for purchase.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://lqingli45-byte.github.io/guzhiliao-website/en/product-read-aloud-workshop.html">
+  <meta property="og:url" content="https://lqingli45-byte.github.io/guzhiliao-website-preview/en/product-read-aloud-workshop.html">
   <meta name="twitter:card" content="summary">
-  <link rel="canonical" href="https://lqingli45-byte.github.io/guzhiliao-website/en/product-read-aloud-workshop.html">
+  <link rel="canonical" href="https://lqingli45-byte.github.io/guzhiliao-website-preview/en/product-read-aloud-workshop.html">
   <script>
     (function () {
       var path = location.pathname || "";
@@ -58,16 +58,16 @@
     <section class="page-hero">
       <div class="wrap">
         <div class="badge-row">
-          <span class="badge">Prototype Demo</span>
-          <span class="badge badge-soft">Chinese Experience</span>
+          <span class="badge">V0.3 Bilingual Simulated Prototype</span>
+          <span class="badge badge-soft">Real AI Not Connected</span>
           <span class="badge badge-soft">Not Available for Purchase</span>
         </div>
         <p class="kicker">First product</p>
         <p class="eyebrow">Read-Aloud Activity Workshop（共读活动工坊）</p>
         <h1>Read-Aloud Activity Workshop</h1>
-        <p class="lede">A planning tool for adult parents or guardians who read with children aged 4–6. The parent uses the tool; the child does not chat with an AI. This English page introduces the product. The first version of the actual tool is provided in Chinese, including for Chinese-speaking families living overseas.</p>
+        <p class="lede">A planning tool for adult parents or guardians who read with children aged 4–6. The parent uses the tool; the child does not chat with an AI. The current V0.3 simulated prototype already has a Chinese and English interface.</p>
         <p class="promise">Prepare less, filter less, and follow up less — then open a plan and start reading together.</p>
-        <p class="notice">This is a prototype demo. The demonstration uses preset stories and simulated responses. Real AI is not officially live. The product is not available for purchase, and checkout is not enabled.</p>
+        <p class="notice">This is a V0.3 bilingual simulated prototype. The plan, the on-the-spot follow-up, and the language switch described below are already implemented with preset stories and simulated responses. They are not real-time AI. A public demo URL is not connected yet, and the product is not available for purchase.</p>
         <div class="actions product-cta">
           <span class="btn btn-reserved" role="button" aria-disabled="true" aria-describedby="demo-note">Try the Demo</span>
           <p class="btn-note" id="demo-note">The Try the Demo button is reserved on this page. It will be enabled only when a real, accessible demo URL is ready. It is not clickable now and does not open a tool.</p>
@@ -119,93 +119,138 @@
 
     <section class="section">
       <div class="wrap">
-        <p class="kicker">What it is designed to do</p>
-        <h2>A ready-to-use plan, not a long list of tips</h2>
-        <p class="lede">The workshop is designed to help a parent prepare a short, adult-led read-aloud plan. In the current prototype demo, these functions are shown with preset stories and simulated responses. They should not be read as a live AI service that is already officially launched.</p>
-        <div class="grid grid-2">
+        <p class="kicker">What is already in V0.3</p>
+        <h2>Simulated features already built, and real AI not yet connected</h2>
+        <div class="grid grid-2 impl-grid">
           <article class="card">
-            <h3>A plan for tonight</h3>
-            <p>It organizes a plan around the story you will read, the child’s approximate age, and how much time you have.</p>
+            <p class="eyebrow">Already implemented in the simulated prototype</p>
+            <ul class="plain-list">
+              <li>A Chinese and English interface. Switching languages keeps the story text, the current step, and this round of on-the-spot feedback.</li>
+              <li>You can load the original sample, <em>How Can We Get the Drawing There?</em> (怎样把画送过去), or enter a story you have the right to use.</li>
+              <li>You can choose about age 4, 5, or 6; about 5, 10, 15, or 20 minutes tonight; and simple materials such as paper and a pen.</li>
+              <li>A preset plan can be opened and followed step by step, with back, next, skip, an optional activity, and an early finish.</li>
+              <li>During a step, you can open “How did your child respond?”, try another approach, take a break, or end the read-aloud, using preset replies.</li>
+              <li>You can try changing a step, switching to a non-drawing activity, adopting or keeping the current version, undoing once, or switching to a 5-minute shorter plan from the current step.</li>
+              <li>A plan is saved in this browser only if the parent chooses to save it. On-the-spot feedback notes are not stored with the saved plan.</li>
+            </ul>
           </article>
           <article class="card">
-            <h3>Questions, plus a fallback</h3>
-            <p>It suggests a few questions to ask, and what you might try if the child does not answer — for example, waiting, offering a choice, or pointing to a detail.</p>
-          </article>
-          <article class="card">
-            <h3>One simple extension</h3>
-            <p>It includes one easy follow-up activity that should not require much preparation or special materials.</p>
-          </article>
-          <article class="card">
-            <h3>Less preparation and follow-up</h3>
-            <p>The aim is to reduce the time you spend preparing, filtering generic advice, and asking a general-purpose AI for more.</p>
+            <p class="eyebrow">Not connected yet</p>
+            <ul class="plain-list">
+              <li>The prototype does not understand a newly entered story in real time, and it does not call a live model.</li>
+              <li>A story you type yourself uses a general simulated template. Only the original sample, under its preset conditions, uses the specially written sample steps.</li>
+              <li>“Something else” recognizes only a few common phrases. It is not a live analysis of what you type.</li>
+              <li>A public, accessible demo URL is not connected, so Try the Demo stays unclickable.</li>
+              <li>Price, payment, usage limits, and how access would be granted after payment have not been set, and purchase is not open.</li>
+            </ul>
           </article>
         </div>
-        <p class="notice">This is a product direction being validated. We do not claim that it will improve reading ability or produce a particular educational result.</p>
+        <p class="notice">The implemented items above are preset flows in the simulated prototype. They show how the experience works. They do not mean real AI is officially live, and they are not a promise of educational results.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <p class="kicker">How it works</p>
-        <h2>Three steps from a story to tonight’s reading</h2>
-        <p class="lede">This is the intended use flow. In the prototype demo, each step is illustrated with preset content and simulated responses, not with officially launched real AI.</p>
+        <h2>Three steps from tonight’s story to a plan you can follow</h2>
+        <p class="lede">These three steps are already implemented in the V0.3 simulated prototype. The plan and the follow-up replies are preset, not real-time AI.</p>
         <ol class="steps">
           <li>
             <span class="step-no">1</span>
             <div>
               <h3>Share tonight’s story and your situation</h3>
-              <p>Tell the workshop what you will read, the child’s approximate age, and how much time you have. You can also note any simple materials on hand. You do not need to provide the child’s real name, school, address, or photos. The tool does not provide or copy unauthorized commercial picture-book text or original illustrations. Please use a story you already have, or one you have the right to use.</p>
+              <p>Tell the workshop what you will read, or load the original sample. Then choose the child’s approximate age, how much time you have, and any simple materials on hand. You do not need to provide the child’s real name, school, address, or photos. The tool does not provide or copy unauthorized commercial picture-book text or original illustrations.</p>
             </div>
           </li>
           <li>
             <span class="step-no">2</span>
             <div>
-              <h3>Get a read-aloud plan</h3>
-              <p>Receive a short plan you can use the same evening: a few questions, ideas for what to do if the child does not answer, and one simple extension activity. In the current prototype demo, this plan is a simulated response, not a live AI generation.</p>
+              <h3>Get a read-aloud plan <span class="badge badge-soft">Simulated</span></h3>
+              <p>The prototype organizes a short plan for the same evening: reading, one simple question, an optional activity, and a closing step. In V0.3 this plan is a simulated response, not a live AI generation.</p>
             </div>
           </li>
           <li>
             <span class="step-no">3</span>
             <div>
               <h3>Read with your child, using the plan</h3>
-              <p>The plan is for the adult to follow. The reading and companionship still happen between you and the child, not between the child and an AI.</p>
+              <p>The plan is for the adult to follow. The reading still happens between you and the child. If the moment is not going smoothly, you can open “How did your child respond?”, try another preset approach, pause, or end the read-aloud.</p>
             </div>
           </li>
         </ol>
       </div>
     </section>
 
+    <section class="section" id="child-response">
+      <div class="wrap">
+        <p class="kicker">Featured function</p>
+        <h2>“How did your child respond?”: if it didn’t work, try another way, pause, or stop</h2>
+        <p class="lede">During a question or activity step, the parent can open “How did your child respond?” The sequence below comes from the preset logic in the V0.3 simulated prototype. It shows how the flow works. It is not real-time AI analyzing the child.</p>
+        <ol class="steps reaction-flow">
+          <li>
+            <span class="step-no">1</span>
+            <div>
+              <h3>Open “How did your child respond?”</h3>
+              <p>Choose what happened: “My child didn’t answer,” “That didn’t work,” “They don’t want to continue,” “They asked a new question,” or “Something else.”</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">2</span>
+            <div>
+              <h3>If “That didn’t work”</h3>
+              <p>After you choose “That didn’t work,” the prototype suggests another approach. In the talk step of the original sample, it first suggests “Try pointing”: “You can point if you want.”</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">3</span>
+            <div>
+              <h3>Say “Still not working”</h3>
+              <p>If the new approach still does not help, you can choose “Still not working.” The prototype does not keep switching forever. It then suggests “Take a break”: “Let’s pause for a bit. We can do something else.”</p>
+            </div>
+          </li>
+          <li>
+            <span class="step-no">4</span>
+            <div>
+              <h3>Pause, or end this read-aloud</h3>
+              <p>When the prototype has reached a pause or a stop, you can choose “End this read-aloud.” If you choose “They don’t want to continue” at the start, it goes to “Stop for today”: “Okay. Let’s stop here today.” You can also finish early at any time with “Finish for today.”</p>
+            </div>
+          </li>
+        </ol>
+        <p class="notice">If you choose “Something else,” you can type a short note and select “Show another way to respond.” The prototype recognizes only a few common phrases, such as wanting to stop, changing the subject, or not answering. Leave out names and private details. This round of feedback stays on the current page and is not saved with a plan. All of these replies are preset and simulated, not real-time AI.</p>
+      </div>
+    </section>
+
     <section class="section">
       <div class="wrap">
-        <p class="kicker">Simulated example</p>
-        <h2>A sample interaction, using a preset story</h2>
-        <p class="lede">The example below is a simulated demonstration. It uses a short original preset story and simulated responses. It is not a recording of a live session, and it does not mean real AI is officially live.</p>
+        <p class="kicker">A real-life scene and a simulated example</p>
+        <h2>How a 15-minute evening read-aloud can go</h2>
+        <p class="lede">The example below uses the original sample in V0.3. It is not a commercial picture book, and it is not a recording of a live AI session.</p>
         <div class="demo-example">
-          <p class="example-label">Simulated example · preset story · simulated responses</p>
+          <p class="example-label">Simulated example · original sample · preset responses</p>
           <div class="demo-turn">
-            <p><strong>Preset story used in this demo</strong> (original sample text, not a commercial picture book): <em>The Little Cloud Visits the Hill</em>. A small cloud drifts over a quiet hill and wonders whether anyone will notice it. A pine tree waves, a rabbit looks up, and a child on the path says hello. The cloud feels brave enough to stay a little longer and make a little shade.</p>
+            <p><strong>The situation</strong></p>
+            <p>In the evening, a parent has about 15 minutes to read with a child who is about 5. Paper and a pen are on hand, but the parent is not sure what to ask, and is more unsure about what to do if the child does not respond.</p>
           </div>
           <div class="demo-turn">
-            <p><strong>What the parent provides</strong></p>
-            <p>Child’s age: 5. Time tonight: about 15 minutes. Materials: none beyond the story itself.</p>
+            <p><strong>Original sample used here</strong> (not a commercial picture book): <em>How Can We Get the Drawing There?</em> (怎样把画送过去). Little Squirrel draws a picture for Little Badger, who lives at the other end of the path. The wind makes the paper hard to carry, so Little Squirrel changes how to hold it twice, and finally arrives with the drawing still in hand.</p>
           </div>
           <div class="demo-turn">
-            <p><strong>Simulated plan the parent would receive</strong></p>
-            <p>Opening: “Tonight we meet a little cloud. If you were that cloud, would you feel shy or brave?”</p>
-            <p>During the story, you might ask: “Who noticed the cloud first?” and “Why do you think the cloud wanted to stay?”</p>
-            <p>If the child does not answer: wait a moment, point to one detail (the waving pine tree or the child on the path), and offer a simple choice, such as “shy or brave?” You can then keep reading. There is no need to press for a long reply.</p>
-            <p>Extension (about three minutes): look out of a window, or simply imagine a cloud shape together, and wave the way the pine tree did. No special materials are required.</p>
+            <p><strong>The simulated plan</strong></p>
+            <p>First, read the short story together. Then ask just one question: “What happened after Little Squirrel rolled up the drawing?” If you still want to continue, use paper and a pen to draw two of the ways Little Squirrel tried. Then say a brief closing line, or simply put the materials away.</p>
           </div>
-          <p class="notice">This example is for illustration only. It uses preset story text and a simulated response. It is not a live AI result.</p>
+          <div class="demo-turn">
+            <p><strong>If “That didn’t work”</strong></p>
+            <p>The parent opens “How did your child respond?” and chooses “That didn’t work.” The prototype first suggests pointing instead of answering. If the parent then chooses “Still not working,” it suggests taking a break. After that, the read-aloud can end without more questions.</p>
+          </div>
+          <p class="notice">This is an illustration of the V0.3 preset flow, not a live AI result. A story you enter yourself uses general simulated steps and is not understood story by story.</p>
         </div>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
-        <p class="kicker">Price and purchase</p>
+        <p class="kicker">Price, purchase, delivery, and help</p>
         <h2>These details are reserved, and not yet set</h2>
-        <p class="lede">The fields below are reserved for an official sale. They will be completed only after the actual offer is confirmed. No price, billing rule, delivery method, or purchase region has been decided here, and none should be assumed.</p>
+        <p class="lede">The fields below will be completed only after an official offer is confirmed. No price or after-sales promise has been decided here.</p>
         <div class="reserve-grid">
           <article class="reserve-item">
             <p class="eyebrow">Price</p>
@@ -213,14 +258,24 @@
             <p>No price is listed because the product is not available for purchase.</p>
           </article>
           <article class="reserve-item">
-            <p class="eyebrow">Billing model</p>
+            <p class="eyebrow">Billing model and billing interval</p>
             <h3 class="tbd">To be confirmed</h3>
             <p>One-time payment, subscription, or another model has not been decided on this page.</p>
           </article>
           <article class="reserve-item">
+            <p class="eyebrow">Usage limits</p>
+            <h3 class="tbd">To be confirmed</h3>
+            <p>How much use would be included after a future purchase has not been set.</p>
+          </article>
+          <article class="reserve-item">
+            <p class="eyebrow">Access after payment</p>
+            <h3 class="tbd">To be confirmed</h3>
+            <p>How access would be granted after a future payment has not been confirmed.</p>
+          </article>
+          <article class="reserve-item">
             <p class="eyebrow">Delivery</p>
             <h3 class="tbd">To be confirmed</h3>
-            <p>How access will be delivered after a future purchase has not been confirmed.</p>
+            <p>What would be delivered, and how, will be written only after the actual offer is confirmed.</p>
           </article>
           <article class="reserve-item">
             <p class="eyebrow">Purchase regions</p>
@@ -228,19 +283,18 @@
             <p>The regions where a future purchase may be offered have not been confirmed.</p>
           </article>
         </div>
-        <p class="notice">Checkout is not enabled. This website does not accept payments, and no payment provider is connected.</p>
+        <p class="notice">Checkout is not enabled, and this website does not accept payments. For help, please write to <a href="mailto:lqingli45@gmail.com">lqingli45@gmail.com</a>. Refund, terms, and privacy pages are linked in the footer. Sales rules that have not been confirmed are not written as if they were already in force.</p>
       </div>
     </section>
 
     <section class="section">
       <div class="wrap">
         <p class="kicker">Current status</p>
-        <h2>Prototype Demo · Chinese Experience · Not Available for Purchase</h2>
+        <h2>V0.3 bilingual simulated prototype · Real AI not connected · Not available for purchase</h2>
         <div class="card status-card">
           <ul class="plain-list">
-            <li>The current version is a prototype demo, used to show the flow and the experience. It uses preset stories and simulated responses.</li>
-            <li>The first version of the actual tool is provided in Chinese. This English page is an introduction, not a separate English-language first release of the tool.</li>
-            <li>Real AI is not officially live. Please do not read the simulated example as a live AI session.</li>
+            <li>The current version is a V0.3 bilingual simulated prototype. It already shows the plan, the language switch, and the on-the-spot follow-up with preset stories and simulated responses.</li>
+            <li>Real AI is not connected. Please do not read the simulated example as a live AI session.</li>
             <li>The Try the Demo button is reserved and will be enabled only when a real, accessible demo URL is ready.</li>
             <li>The product is not available for purchase. There is no checkout and no payment on this website.</li>
           </ul>
@@ -259,7 +313,7 @@
           <h2>Use and limits</h2>
           <ul>
             <li>This tool is used by adults to support family read-aloud time. It is not a chat product for a child to use alone.</li>
-            <li>Any AI-generated or simulated content is only an aid for preparing and carrying out a read-aloud. It is not medical advice, a psychological diagnosis, or a guarantee of educational results.</li>
+            <li>Any simulated content, or any AI-generated content in a future version, is only an aid for preparing and carrying out a read-aloud. It is not medical advice, a psychological diagnosis, or a guarantee of educational results.</li>
             <li>You do not need to submit a child’s real name, school, address, photos, or other sensitive personal information.</li>
             <li>This product does not provide or copy unauthorized commercial picture-book full text or original illustrations. Please use a story you already have, or one you have the right to use.</li>
           </ul>
@@ -286,7 +340,7 @@
         <a href="en/refund.html">Refund Policy</a>
       </div>
     </div>
-    <div class="wrap fineprint">© 2026 谷知了 · Gu Zhi Liao. The first product is currently a prototype demo. It is not available for purchase, and this website does not accept payments.</div>
+    <div class="wrap fineprint">© 2026 谷知了 · Gu Zhi Liao. The first product is currently a V0.3 bilingual simulated prototype. Real AI is not connected, it is not available for purchase, and this website does not accept payments.</div>
   </footer>
   <script src="assets/i18n.js"></script>
   <script src="assets/script.js"></script>

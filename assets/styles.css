@@ -450,3 +450,15 @@ html[lang="en"] .btn-note { max-width: 40rem; }
   padding: 8px 16px;
 }
 .preview-banner strong { font-weight: 700; }
+
+
+.impl-grid .plain-list { margin-top: 8px; }
+.reaction-flow { margin-top: 20px; }
+.demo-example .demo-turn + .demo-turn { margin-top: 16px; padding-top: 16px; border-top: 1px solid var(--line); }
+.demo-example .demo-turn p { margin: 0 0 8px; }
+.demo-example .demo-turn p:last-child { margin-bottom: 0; }
+@media (max-width: 860px) {
+  .impl-grid { grid-template-columns: 1fr; }
+  .reaction-flow li,
+  .steps li { grid-template-columns: 40px 1fr; gap: 12px; padding: 16px; }
+}
