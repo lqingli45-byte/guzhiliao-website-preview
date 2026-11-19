@@ -1,0 +1,694 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#eef0e7">
+  <meta name="referrer" content="no-referrer">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'none'; script-src 'sha256-QE2oFx+t7EapTdPyprIx7x5QNPpaG0eRfyKMJfZHavs='; style-src 'unsafe-inline'; connect-src 'none'; base-uri 'none'; form-action 'none'">
+  <title>共读活动工坊 / Read-Aloud Activity Workshop</title>
+  <style>:root{font-family:"PingFang SC","Microsoft YaHei",system-ui,sans-serif;color:#26382e;background:#f5f4ed;font-synthesis:none;line-height:1.65;--green:#315c49;--muted:#66756b;--line:#d8dfd3;--paper:#fffef9}
+*{box-sizing:border-box}body{margin:0}button,input,textarea,select{font:inherit}button,a,input,textarea,summary{touch-action:manipulation}button{min-height:46px;border-radius:12px;border:1px solid var(--line);padding:10px 16px;background:var(--paper);color:inherit;cursor:pointer}button:hover{border-color:var(--green)}button:focus-visible,a:focus-visible,summary:focus-visible{outline:3px solid #c6893f;outline-offset:3px}button:disabled{opacity:.5;cursor:wait}button.primary{background:var(--green);color:white;border-color:var(--green)}button.text{background:transparent;border:0;color:var(--green);padding:8px}button.danger{color:#994333}a{color:var(--green)}.site-head{max-width:820px;margin:auto;padding:20px 22px;display:flex;align-items:center;justify-content:space-between;gap:8px;border-bottom:1px solid var(--line)}.site-head a{text-decoration:none;font-weight:700}.site-head span:not(.mode){font-weight:400;font-size:13px;display:block}.mode{font-size:12px;border:1px solid #bbcaaf;border-radius:20px;padding:3px 9px;white-space:nowrap}main{max-width:680px;margin:auto;padding:28px 20px 16px;min-height:65vh}h1{font-size:30px;font-weight:650;line-height:1.35;letter-spacing:-.6px;margin:8px 0 14px}h2{font-size:21px;line-height:1.4;margin:0 0 14px}h3{font-size:16px;margin:12px 0 6px}p{margin:8px 0 16px}.eyebrow{font-size:13px;color:var(--muted)}.muted{color:var(--muted);font-size:14px}.intro{font-size:17px}.panel{background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:23px;margin:18px 0}.callout{background:#eaf0e3;border-radius:12px;padding:14px 16px;margin:16px 0}.fallback{background:#f6f0e4;border-left:3px solid #c2a16b;padding:12px 14px;margin-top:12px}.quote{font-size:21px;line-height:1.65;font-weight:550}.story{white-space:pre-wrap;font-size:18px;line-height:1.95}.buttons{display:flex;flex-wrap:wrap;gap:10px;margin-top:18px}.buttons>*{flex:1}.secondary{display:flex;flex-wrap:wrap;gap:4px;margin-top:10px}.secondary button{font-size:14px}.statusline{display:flex;justify-content:space-between;gap:12px;color:var(--muted);font-size:13px}.progress{display:flex;gap:7px;margin:14px 0 22px}.progress span{height:4px;background:#dce2d5;flex:1;border-radius:4px}.progress .current{background:var(--green)}.progress .passed{background:#9cad91}label.field{display:block;font-weight:550;margin:20px 0 7px}input[type=text],textarea,select{width:100%;border:1px solid #b8c5b8;background:white;border-radius:10px;padding:12px;color:inherit}textarea{resize:vertical;min-height:175px}fieldset{border:0;padding:0;margin:20px 0}legend{font-weight:550;margin-bottom:9px}.choices{display:flex;flex-wrap:wrap;gap:8px}.choice{position:relative;display:flex;align-items:center;gap:7px;border:1px solid var(--line);border-radius:10px;padding:9px 12px;background:var(--paper);cursor:pointer}.choice:has(input:checked){background:#e4eddd;border-color:var(--green)}input[type=radio],input[type=checkbox]{accent-color:var(--green);width:17px;height:17px}.error{color:#8a3528;background:#fff0e9;border:1px solid #e0b5a0;border-radius:10px;padding:12px}.error:empty{display:none}details{border-top:1px solid var(--line);margin-top:18px;padding-top:12px}summary{cursor:pointer;color:var(--green);min-height:42px}.saved{border-bottom:1px solid var(--line);padding:18px 0}.saved:first-child{padding-top:0}.saved h2{font-size:19px;margin:0 0 5px}.tag{font-size:12px;color:var(--muted)}.edit-panel{border:2px solid #a5ba98;background:white;border-radius:15px;padding:18px;margin-top:20px}.edit-panel textarea{min-height:85px}.edit-panel select{margin-bottom:12px}footer{max-width:680px;margin:20px auto;padding:20px;color:var(--muted);font-size:12px;border-top:1px solid var(--line)}#notice{max-width:640px;margin:8px auto;color:var(--green);padding:0 20px;font-size:14px}.print-only{display:none}.preview-step{border-top:1px solid var(--line);padding:14px 0}.tiny{font-size:12px;color:var(--muted)}.warning{color:#805328}.screen-hint{max-width:680px;margin:auto}.limit{font-size:12px;color:var(--muted);text-align:right}
+@media(max-width:440px){main{padding:22px 16px}h1{font-size:27px}.panel{padding:19px}.site-head{padding:15px 16px}.quote{font-size:20px}.buttons{gap:8px}.buttons button{padding:11px 9px}.intro{font-size:16px}}
+@media print{@page{size:A4;margin:15mm}body{background:white;color:black;font-size:11pt}.site-head,.mode,footer,#notice,button,.secondary,.screen-only,.edit-panel{display:none!important}main{max-width:none;padding:0;margin:0}.panel{border:0;padding:0;margin:10px 0}.print-only{display:block}.preview-step{break-inside:avoid}details{display:block}details>summary{display:none}h1{font-size:21pt}.story{font-size:11pt;line-height:1.6}.fallback{background:none;border:1px solid #aaa}.callout{background:none}h2,h3{break-after:avoid}}
+.language-picker{display:flex;flex:0 0 auto;gap:4px;padding:3px;background:#e9eee3;border-radius:14px}
+.language-picker button{padding:6px 10px;min-height:44px;border-color:transparent;background:transparent}
+.language-picker button[aria-pressed="true"]{color:white;background:var(--green)}
+.statusline>span:last-child{flex:0 0 auto}
+details.source .story{overflow-wrap:anywhere}
+
+.model-wrap { max-width: 680px; margin: 0 auto; padding-inline: 20px; }
+#model-control:not([hidden]) { display: inline-flex; gap: .5rem; align-items: center; padding-block: .65rem; }
+@media print { .model-wrap { display: none; } }
+</style>
+</head>
+<body>
+  <header class="site-head">
+    <div><strong id="brand">谷知了</strong><span id="workshop-name"></span></div>
+    <div class="language-picker" role="group" aria-label="Language / 语言">
+      <button type="button" lang="zh-CN" data-language="zh">中文</button>
+      <button type="button" lang="en" data-language="en">English</button>
+    </div>
+  </header>
+  <main id="app"></main>
+  <p id="notice" role="status" aria-live="polite"></p>
+  <footer></footer>
+  <script>(() => { 'use strict';
+const edition = "free";
+const storyLibrary = [{"id":"drawing-in-the-wind","theme":"problem","zh":{"title":"怎样把画送过去","story":"小松鼠画了一张画，要送给小獾。它捏着纸的两个角往外走，风却把纸吹鼓了，挡住了眼睛。它回到门边，把画卷起来。再走出去时，纸的一头又松开了。\n它退到背风的墙边，把纸卷好，改用两只手握住。到了小獾家，两人一起把画展开。","cue":"改用两只手握住","questions":["最后，小松鼠用了几只手握住画？","摊开的画和卷起来的画，带出去有什么不一样？","小松鼠先捏纸角，后来卷画。哪一次它又换了办法？"],"move":"坐着把两只空手张开当画纸，再把双手靠拢，假装握住卷起来的画。","extra":"愿意的话，轮流用动作演出“捏两角”和“双手握”，看看能不能认出来。","say":"我先把手张开，再握住。你想试哪一个？","point":"你可以举一只手，或者举两只给我看。"},"en":{"title":"How Can We Get the Drawing There?","story":"Little Squirrel drew a picture for Badger. Outside, Squirrel held two corners, but the wind puffed up the paper and blocked the way ahead. Squirrel went back to the door and rolled it up. When Squirrel stepped outside again, one end came loose.\nSquirrel stepped behind a wall, rolled the paper again, and held it with both hands. At Badger’s house, they unrolled the picture together.","cue":"held it with both hands","questions":["How many hands did Squirrel use at the end?","What was different about carrying the picture flat and carrying it rolled up?","Squirrel held the corners first and then rolled up the paper. When did the plan change again?"],"move":"Stay seated. Spread your empty hands to stand for a flat picture, then bring them together as if holding the roll.","extra":"Take turns showing the corners or the roll. Let the other person guess.","say":"I’ll spread my hands, then hold the roll. Which would you like to try?","point":"You can show me with one hand or two."}}];
+const knowledgeCards = [{"id":"read-one","category":"reading","ages":[4,5,6],"scenes":["plan","read","talk"],"advice":"Ask once about a specific moment or illustration that actually exists. Follow the child’s comment.","avoid":"Avoid a sequence of test questions.","source":{"name":"American Academy of Pediatrics, How to Share Books with Your Preschooler","reference":"https://www.healthychildren.org/English/ages-stages/preschool/Pages/How-to-Share-Books-With-Your-Preschooler.aspx"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"}},{"id":"emotion-observe","category":"emotions","ages":[4,5,6],"scenes":["plan","talk"],"advice":"Describe what the character did. Invite an optional guess about feelings.","avoid":"Never label the child or state uncertain feelings as facts.","source":{"name":"Harvard Center on the Developing Child, How-to: 5 Steps for Serve and Return","reference":"https://developingchild.harvard.edu/resources/guides/how-to-5-steps-for-brain-building-serve-and-return/"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"},"keywords":["低头","难过","开心","害怕","sad","worried","looked down"]},{"id":"family-follow","category":"family","ages":[4,5,6],"scenes":["read","talk","play"],"advice":"Wait briefly, then show, listen or follow the child’s attention.","avoid":"Avoid insisting on a response.","source":{"name":"Harvard Center on the Developing Child, How-to: 5 Steps for Serve and Return","reference":"https://developingchild.harvard.edu/resources/guides/how-to-5-steps-for-brain-building-serve-and-return/"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"},"reactions":["silent","question","other","redirect"]},{"id":"feedback-change","category":"feedback","ages":[4,5,6],"scenes":["read","talk","play"],"advice":"Change the form of interaction after an attempt. A pause or ending is a valid response.","avoid":"Avoid rephrasing the same demand.","source":{"name":"Harvard Center on the Developing Child, How-to: 5 Steps for Serve and Return","reference":"https://developingchild.harvard.edu/resources/guides/how-to-5-steps-for-brain-building-serve-and-return/"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"},"reactions":["retry","stop"]},{"id":"safe-play","category":"safety","ages":[4,5,6],"scenes":["play","plan"],"advice":"Keep activity gentle, optional and safe with listed household supplies.","avoid":"Avoid sharp objects, heat, small objects in the mouth and unsafe climbing.","source":{"name":"共读活动工坊 v0.1 统一产品规格与用户确认的边界","reference":"Internal product rules, age ranges are adjustable design defaults"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"}},{"id":"age-4","category":"age","ages":[4],"scenes":["plan","read","talk","play"],"advice":"Use one short concrete prompt about something visible. Accept pointing, watching or listening.","avoid":"Age is a starting point. Avoid capability judgments, diagnosis or pressure.","source":{"name":"共读活动工坊 v0.1 统一产品规格与用户确认的边界","reference":"Internal product rules, age ranges are adjustable design defaults"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"}},{"id":"age-5","category":"age","ages":[5],"scenes":["plan","read","talk","play"],"advice":"Try one concrete prediction or comparison about the story. An adult can demonstrate first.","avoid":"Age is a starting point. Avoid capability judgments, diagnosis or pressure.","source":{"name":"共读活动工坊 v0.1 统一产品规格与用户确认的边界","reference":"Internal product rules, age ranges are adjustable design defaults"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"}},{"id":"age-6","category":"age","ages":[6],"scenes":["plan","read","talk","play"],"advice":"Offer an optional sequence or comparison if the child is interested. Simplify if needed.","avoid":"Age is a starting point. Avoid capability judgments, diagnosis or pressure.","source":{"name":"共读活动工坊 v0.1 统一产品规格与用户确认的边界","reference":"Internal product rules, age ranges are adjustable design defaults"},"status":"approved","version":"1.0.0","review":{"by":"Codex content review (product/editorial scope)","date":"2026-11-18"}}];
+const storageKey = 'guzhiliao-workshop-language';
+const locale = () => language === 'zh' ? 'zh-CN' : 'en';
+const hrefLanguage = new URLSearchParams(location.search).get('lang');
+
+function preferredLanguage() {
+  if (hrefLanguage === 'en' || hrefLanguage === 'zh') return hrefLanguage;
+  try {
+    const saved = localStorage.getItem(storageKey);
+    if (saved === 'zh' || saved === 'en') return saved;
+  } catch { /* Storage is optional. */ }
+  return /^zh\b/i.test(navigator.language) ? 'zh' : 'en';
+}
+
+let language = preferredLanguage();
+const phrase = (zh, en) => language === 'zh' ? zh : en;
+
+function chooseLanguage(value) {
+  if (value !== 'en' && value !== 'zh') return;
+  language = value;
+  try { localStorage.setItem(storageKey, value); } catch { /* Works for this visit. */ }
+  const url = new URL(location.href);
+  url.searchParams.set('lang', value);
+  try { history.replaceState(history.state, '', url); } catch { /* Local files can omit URL changes. */ }
+}
+
+const materialLabel = value => phrase(value, ({
+  '无材料': 'No supplies', '纸': 'Paper', '笔': 'Pen', '布袋': 'Cloth bag',
+  '薄书': 'Thin book', '薄衣物': 'Light clothing'
+})[value] ?? value);
+
+const STEP_IDS = ['read', 'talk', 'play', 'close'];
+const VERSION = '0.2.0';
+
+class UserError extends Error {
+  constructor(message, status = 400) {
+    super(message);
+    this.status = status;
+  }
+}
+
+function text(value, name, max = 700) {
+  if (typeof value !== 'string' || !value.trim() || value.length > max) {
+    throw new UserError(`${name}不能为空，且须在${max}字以内。`);
+  }
+  return value.trim();
+}
+
+function validateInput(value) {
+  if (!value || typeof value !== 'object') throw new UserError('请填写故事和活动条件。');
+  const story = text(value.story, '故事内容', 5000);
+  if (story.length < 30) throw new UserError('请提供至少30字的故事经过或简述，只有书名还不够。');
+  if (![4, 5, 6].includes(value.age)) throw new UserError('请选择4、5或6岁。');
+  if (![5, 10, 15, 20].includes(value.minutes)) throw new UserError('请选择可用时间。');
+  if (!Array.isArray(value.materials) || value.materials.length > 8) throw new UserError('请选择材料或无材料。');
+  const materials = [...new Set(value.materials.map(item => text(item, '材料', 30)))];
+  const title = typeof value.title === 'string' ? value.title.trim().slice(0, 60) : '';
+  return { story, title, age: value.age, minutes: value.minutes, materials };
+}
+
+const stepSchema = {
+  type: 'object', additionalProperties: false,
+  required: ['id', 'title', 'minutes', 'action', 'say', 'fallback', 'question', 'backups', 'materials', 'evidence'],
+  properties: {
+    id: { type: 'string', enum: STEP_IDS },
+    title: { type: 'string' }, minutes: { type: 'integer', minimum: 0, maximum: 20 },
+    action: { type: 'string' }, say: { type: 'string' }, fallback: { type: 'string' },
+    question: { type: 'string' }, backups: { type: 'array', items: { type: 'string' }, maxItems: 2 },
+    materials: { type: 'array', items: { type: 'string' }, maxItems: 8 },
+    evidence: { type: 'array', items: { type: 'string' }, maxItems: 3 }
+  }
+};
+
+const planSchema = {
+  type: 'object', additionalProperties: false,
+  required: ['title', 'steps'],
+  properties: {
+    title: { type: 'string' },
+    steps: { type: 'array', minItems: 4, maxItems: 4, items: stepSchema }
+  }
+};
+
+// These checks reject clear failures; they cannot prove semantic or age suitability.
+const unsafe = /不回答就|不许停|必须答对|惩罚|吓唬|你真笨|不听话就|保证提高智力|保证提升阅读能力|治疗心理问题|诊断为|发育障碍|套在头上|站到椅子上/;
+
+function exactKeys(value, keys) {
+  return value && typeof value === 'object' && !Array.isArray(value) &&
+    Object.keys(value).length === keys.length && keys.every(key => Object.hasOwn(value, key));
+}
+
+function validateStep(raw, input, id) {
+  if (!exactKeys(raw, stepSchema.required) || raw.id !== id) throw new UserError('AI步骤编号不正确，请重试。', 502);
+  const result = { id };
+  for (const [key, label, max] of [
+    ['title', '步骤标题', 40], ['action', '操作', 240], ['say', '家长话术', 130], ['fallback', '不参与时接法', 160]
+  ]) result[key] = text(raw[key], label, max);
+  if (!Number.isInteger(raw.minutes) || raw.minutes < 0 || raw.minutes > 20) throw new UserError('AI时间格式异常。', 502);
+  result.minutes = raw.minutes;
+  if (typeof raw.question !== 'string') throw new UserError('AI主问题格式异常。', 502);
+  result.question = raw.question.trim();
+  if (result.question.length > 130 || (id === 'talk' && !result.question)) throw new UserError('AI主问题需要调整。', 502);
+  if (!Array.isArray(raw.backups) || raw.backups.length > 2) throw new UserError('AI备用问题过多。', 502);
+  result.backups = raw.backups.map(item => text(item, '备用问题', 130));
+  if (id !== 'talk' && (result.question || result.backups.length)) throw new UserError('问题应集中在聊天步骤。', 502);
+  if (!Array.isArray(raw.materials) || raw.materials.some(item => !input.materials.includes(item))) throw new UserError('AI引入了未选择的材料，请重试。', 502);
+  result.materials = [...new Set(raw.materials)];
+  if (!Array.isArray(raw.evidence) || raw.evidence.length > 3) throw new UserError('AI故事依据格式异常。', 502);
+  result.evidence = raw.evidence.map(item => text(item, '故事依据', 150));
+  if (result.evidence.some(quote => !input.story.includes(quote))) throw new UserError('AI引用的故事依据不在原文中，请重试。', 502);
+  if (id === 'talk' && result.evidence.length === 0) throw new UserError('AI问题缺少故事依据。', 502);
+  if (unsafe.test(JSON.stringify(result))) throw new UserError('内容检查发现需修订的话术或玩法，请重试。', 502);
+  return result;
+}
+
+function validatePlan(raw, input) {
+  if (!exactKeys(raw, planSchema.required) || !Array.isArray(raw.steps) || raw.steps.length !== 4) throw new UserError('AI方案不完整，请重试。', 502);
+  const steps = STEP_IDS.map((id, i) => validateStep(raw.steps[i], input, id));
+  if (steps.reduce((sum, step) => sum + step.minutes, 0) !== input.minutes) throw new UserError('AI参考时长与选择不一致，请重试。', 502);
+  const title = text(raw.title, '方案标题', 60);
+  if (unsafe.test(title)) throw new UserError('方案标题需修订。', 502);
+  return { title, steps };
+}
+
+function validatePatch(raw, plan, input, index) {
+  if (!Number.isInteger(index) || index < 0 || index > 3) throw new UserError('修改步骤不存在。');
+  const step = validateStep(raw, input, STEP_IDS[index]);
+  if (step.minutes !== plan.steps[index].minutes) throw new UserError('这次修改改变了时间安排，已保留原方案。请只修改当前步骤。', 502);
+  return step;
+}
+
+function fiveMinutePlan(plan, index) {
+  const steps = structuredClone(plan.steps);
+  const budgets = [[3, 1, 0, 1], [0, 3, 1, 1], [0, 0, 4, 1], [0, 0, 0, 5]][index];
+  steps.forEach((step, i) => {
+    if (i >= index) {
+      step.minutes = budgets[i];
+      step.backups = [];
+    }
+  });
+  if (index === 0) {
+    steps[0].action = '从现在起约5分钟。选原故事中能在约3分钟内读完的一段；太长就只读故事，随时结束。';
+    steps[2].action = '这次省去延伸活动。';
+  }
+  if (index <= 1) steps[1].action = '只选当前主问题聊一句。孩子不想说，就用下面的接法或直接结束。';
+  if (index <= 2 && budgets[2]) steps[2].action = '想继续时，只选原活动里的一个动作试一次。材料不足就看家长用动作示范，随时结束。';
+  steps[3].action = '可以停在这里，聊够就结束，无需用满参考时间。';
+  return { ...plan, steps };
+}
+
+
+const codes = ['zh', 'en'];
+const localReactions = ['silent', 'retry', 'watch', 'topic', 'stop'];
+const guidance = {
+  'age-4': ['问一句看得见的具体问题。孩子可以用手指、动作或安静听来参与。', 'Ask one concrete question. Pointing, moving, or simply listening is fine.'],
+  'age-5': ['选一个变化聊一句。你可以先示范，让孩子决定是否接着聊。', 'Talk about one change. You can show an example and let your child decide whether to join in.'],
+  'age-6': ['孩子感兴趣时，再聊故事里的先后或两种做法。也可以简化成一句。', 'If your child is interested, talk about the order of events or compare two approaches. One short question is enough.']
+};
+
+function createRuleProvider(library, cards) {
+  const approved = new Map(cards.filter(card => card.status === 'approved' && card.review?.by && card.source?.reference)
+    .map(card => [card.id, card]));
+  const catalog = new Map(library.map(story => [story.id, story]));
+  const supports = (id, age, scene) => {
+    const card = approved.get(id);
+    return card?.ages.includes(age) && card.scenes.includes(scene);
+  };
+  function storyFor(input) {
+    const record = catalog.get(input.storyId);
+    if (!record || ![4, 5, 6].includes(input.age) || ![5, 10].includes(input.minutes)) {
+      throw new UserError('Unsupported story, age or duration.');
+    }
+    return record;
+  }
+
+  function readout(input, code, record) {
+    const tr = (zh, en) => code === 'zh' ? zh : en;
+    const story = record[code];
+    const age = input.age;
+    const duration = input.minutes === 5 ? [2, 1, 1, 1] : [3, 2, 4, 1];
+    const ageRule = 'age-' + age;
+    const talkAction = supports(ageRule, age, 'talk') ? tr(...guidance[ageRule]) : tr('选一句聊聊。', 'Pick one thing to talk about.');
+    const observe = record.theme === 'emotion' && supports('emotion-observe', age, 'talk')
+      ? tr('先说出角色做了什么，把对心情的猜测留给孩子。', 'Start with what the character did. Give your child room to guess how they felt.') : '';
+    const playAction = supports('safe-play', age, 'play')
+      ? [story.move, input.minutes === 10 ? story.extra : ''].filter(Boolean).join(' ')
+      : tr('可以跳过小活动。', 'You can skip the activity.');
+    const setup = (index, content) => ({
+      id: STEP_IDS[index], minutes: duration[index], question: '', backups: [], materials: [], evidence: [], ...content
+    });
+    const steps = [
+      setup(0, { title: tr('先读一小段', 'Read together'),
+        action: supports('read-one', age, 'read') ? tr('读下面的短故事。可以停一停，或重读孩子想听的一句。', 'Read the short story below. Pause or reread a line your child wants to hear again.') : tr('一起读故事。', 'Read the story together.'),
+        say: tr('我们来读这个故事。听到想停的地方就告诉我。', 'Let’s read this story. Tell me if you want to pause.'),
+        fallback: tr('你可以只听，或者我们现在就停。', 'You can just listen, or we can stop now.') }),
+      setup(1, { title: tr('聊故事里的一个瞬间', 'Talk about one moment'),
+        action: [talkAction, observe].filter(Boolean).join(' '), say: tr('我想听听你注意到了什么。', 'I’d like to hear what you noticed.'),
+        fallback: tr('我先读故事里的这句，你听着就好。', 'I’ll read this line from the story. You can just listen.'),
+        question: story.questions[age - 4], backups: input.minutes === 10 && age > 4 ? [story.questions[0]] : [], evidence: [story.cue] }),
+      setup(2, { title: tr('试试故事里的小动作', 'Try a little action from the story'),
+        action: playAction, say: story.say, fallback: tr('我可以先做一次。你想看就看，也可以跳过。', 'I can show you once. You can watch or skip it.'), evidence: [story.cue] }),
+      setup(3, { title: tr('今天就读到这里', 'Finish for today'),
+        action: tr('说一句谢谢，或安静地合上故事。孩子有兴趣时可以下次再读。', 'Say thanks or close the story quietly. You can read it again another day.'),
+        say: tr('谢谢你陪我一起读。我们到这里就好。', 'Thanks for reading with me. Let’s stop here.'),
+        fallback: tr('不想说也没关系。', 'It’s okay to finish quietly.') })
+    ];
+    return validatePlan({ title: story.title, steps }, { ...input, story: story.story, materials: [] });
+  }
+
+  function plan(input) {
+    const record = storyFor(input);
+    return Object.fromEntries(codes.map(code => [code, readout(input, code, record)]));
+  }
+
+  // Keep the same provider surface for the separate future Pro build.
+  function revise({ input, plans, index, choice }) {
+    const record = storyFor(input);
+    if (!['simple', 'show'].includes(choice)) throw new UserError('Unsupported edit.');
+    return Object.fromEntries(codes.map(code => {
+      const tr = (zh, en) => code === 'zh' ? zh : en;
+      const old = plans[code].steps[index];
+      const story = record[code];
+      const variants = [
+        { action: tr('读故事里的一小段。想停就停。', 'Read one short part. Stop anytime.'), say: tr('一起听一句吧。', 'Let’s listen to one line.') },
+        { action: tr('给孩子一个不用说话也能参与的选项。', 'Let your child join in without having to speak.'), say: story.point, question: story.questions[0], backups: [] },
+        { action: story.move, say: tr('我先做一次。', 'I’ll show you once.') },
+        { action: tr('在这里结束。', 'Finish here.'), say: tr('今天到这里。', 'Let’s stop here.') }
+      ];
+      const change = choice === 'show' && old.id === 'play'
+        ? { action: story.move, say: story.say, fallback: tr('你只要看，或者我们停下来。', 'You can just watch, or we can stop.') }
+        : variants[index];
+      return [code, validatePatch({ ...old, ...change }, plans[code], { ...input, story: story.story, materials: [] }, index)];
+    }));
+  }
+
+  function reaction({ input, stepId, reason, tried = [] }) {
+    const record = storyFor(input);
+    if (!localReactions.includes(reason) || !['read', 'talk', 'play'].includes(stepId)) throw new UserError('Unsupported reaction.');
+    const canChange = supports('feedback-change', input.age, stepId);
+    const canFollow = supports('family-follow', input.age, stepId);
+    const methods = reason === 'retry' ? ['point', 'show'] :
+      reason === 'silent' ? ['listen', 'point'] : reason === 'watch' ? ['show', 'listen'] : ['follow', 'listen'];
+    const method = reason === 'stop' ? 'stop' :
+      !canChange || tried.includes('pause') || tried.length >= 2 ? 'pause' :
+      methods.find(item => !tried.includes(item) && (item !== 'follow' || canFollow)) ?? 'pause';
+    return Object.fromEntries(codes.map(code => {
+      const tr = (zh, en) => code === 'zh' ? zh : en;
+      const story = record[code];
+      const scripts = {
+        point: [tr('换成指一指', 'Switch to pointing'), tr('把问题换成手指能回答的选择。可以不指。', 'Offer a choice they can answer without speaking. Pointing is optional.'), story.point],
+        listen: [tr('家长读，孩子只听', 'Read a line for them'), tr('读这一句，不加追问。', 'Read this line without adding a question.'), story.cue],
+        show: [tr('换成家长示范', 'Switch to showing'), story.move, tr('我做一次给你看。你可以只看。', 'I’ll show you once. You can just watch.')],
+        follow: [tr('跟着孩子的话题', 'Follow their topic'), tr('先聊孩子正在注意的事。孩子愿意时才回到故事。', 'Talk about what caught their attention. Return to the story only if they want to.'), tr('你刚才注意到这个呀，我听着。', 'That’s what caught your eye. I’m listening.')],
+        pause: [tr('先停一下', 'Take a break'), tr('把页面放一边。孩子主动想继续时再回来。', 'Put the screen aside. Return if your child wants to.'), tr('我们先停一停，你想做别的也可以。', 'Let’s pause. We can do something else.')],
+        stop: [tr('今天结束', 'Stop for today'), tr('结束共读，先把选择权留给孩子。', 'End the read-aloud and let your child decide what comes next.'), tr('好，今天就读到这里。', 'Okay. Let’s finish here today.')]
+      };
+      const [title, activity, say] = scripts[method];
+      return [code, { method, title, activity, say }];
+    }));
+  }
+
+  function compact({ input, plans, index }) {
+    const short = plan({ ...input, minutes: 5 });
+    const budgets = [[2, 1, 1, 1], [0, 2, 2, 1], [0, 0, 4, 1], [0, 0, 0, 1]][index];
+    for (const code of codes) {
+      short[code].steps = short[code].steps.map((step, i) =>
+        i < index ? plans[code].steps[i] : { ...step, minutes: budgets[i] });
+    }
+    return short;
+  }
+
+  return { plan, revise, reaction, compact, storyFor };
+}
+
+const l = phrase;
+const provider = createRuleProvider(storyLibrary, knowledgeCards);
+const app = document.querySelector('#app');
+const notice = document.querySelector('#notice');
+const languagePicker = document.querySelector('.language-picker');
+let page = 'input';
+let inputDraft;
+let session;
+let savedId;
+let listOrigin;
+let preview = false;
+let undo;
+let edit;
+let busy = false;
+let dbPromise;
+const reactions = new Map();
+const sourceLabel = () => l('离线共读活动', 'Offline read-aloud');
+const reactionOptions = [
+  ['silent', '孩子不回答', 'My child didn’t answer'],
+  ['retry', '说了但没用', 'That didn’t work'],
+  ['watch', '孩子只想看', 'My child just wants to watch'],
+  ['topic', '孩子换了话题', 'My child changed the subject'],
+  ['stop', '孩子想停', 'My child wants to stop']
+];
+const plans = () => session.plans[language];
+const current = () => plans().steps[session.index];
+const minute = n => l(`${n} 分钟`, `${n} min`);
+const years = age => l(`${age} 岁`, `Age ${age}`);
+const status = key => ({
+  pending: l('未进行', 'Not started'), skipped: l('已跳过', 'Skipped'), viewed: l('已查看', 'Viewed')
+})[key];
+
+function escape(value) {
+  return String(value ?? '').replace(/[&<>"']/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char]));
+}
+
+function button(action, label, css = '', attrs = '') {
+  return `<button type="button" class="${css}" data-action="${action}" ${attrs}>${label}</button>`;
+}
+
+const errorBlock = '<p id="error" class="error" role="alert" tabindex="-1"></p>';
+function tell(text) { notice.textContent = text; }
+function error(text) {
+  const item = document.querySelector('#error');
+  if (!item) return tell(text);
+  item.textContent = text;
+  item.focus();
+}
+
+function focusPage() {
+  document.querySelector('h1')?.focus();
+  window.scrollTo(0, 0);
+}
+
+function database() {
+  dbPromise ||= new Promise((resolve, reject) => {
+    const request = indexedDB.open('gongdu-lite-' + edition, 1);
+    request.onupgradeneeded = () => request.result.createObjectStore('sessions', { keyPath: 'id' });
+    request.onsuccess = () => resolve(request.result);
+    request.onerror = () => reject(new Error(l('本机保存不可用，请检查浏览器权限。', 'Local saves are unavailable. Check your browser permissions.')));
+  }).catch(err => { dbPromise = null; throw err; });
+  return dbPromise;
+}
+
+async function store(mode, action) {
+  const db = await database();
+  return new Promise((resolve, reject) => {
+    const tx = db.transaction('sessions', mode);
+    const request = action(tx.objectStore('sessions'));
+    tx.oncomplete = () => resolve(request.result);
+    tx.onerror = tx.onabort = () => reject(new Error(l('本机保存操作失败。', 'The local storage operation failed.')));
+  });
+}
+
+function draftFromForm() {
+  const data = new FormData(document.querySelector('#input-form'));
+  return { storyId: data.get('story'), age: Number(data.get('age')), minutes: Number(data.get('minutes')) };
+}
+
+function inputPage() {
+  const draft = inputDraft ?? { storyId: storyLibrary[0].id, age: 5, minutes: 10 };
+  const radio = (field, options, caption) => options.map(n => `<label class="choice">
+    <input type="radio" name="${field}" value="${n}" required ${draft[field] === n ? 'checked' : ''}>${caption(n)}</label>`).join('');
+  app.innerHTML = `
+    <h1 tabindex="-1">${l('今天一起读什么？', 'What shall we read today?')}</h1>
+    <p class="intro">${l('选一篇原创故事，跟着手机读、聊一句、玩一个小动作。', 'Pick an original story, talk about one moment, and try a little activity together.')}</p>
+    <form id="input-form">
+      <label class="field" for="story">${l('故事库', 'Story library')} · ${edition === 'free' ? l('免费体验', 'Free edition') : l('完整版', 'Full edition')}</label>
+      <select name="story" id="story">${storyLibrary.map(story => `<option value="${escape(story.id)}" ${draft.storyId === story.id ? 'selected' : ''}>${escape(story[language].title)}</option>`).join('')}</select>
+      <p class="tiny">${l('Lite 只支持故事库里的故事，不能输入或分析其他故事。活动和接话来自编写好的本地规则。', 'Lite uses the stories in this library and cannot analyze other stories. Activities and responses follow written, offline rules.')}</p>
+      <fieldset><legend>${l('孩子几岁？', 'How old is your child?')}</legend><div class="choices">${radio('age', [4, 5, 6], years)}</div></fieldset>
+      <fieldset><legend>${l('想读多久？', 'How long would you like to read?')}</legend><div class="choices">${radio('minutes', [5, 10], minute)}</div></fieldset>
+      ${errorBlock}<button class="primary" type="submit">${l('开始共读', 'Start reading')}</button>
+    </form>
+    <div class="secondary">${button('list', l('打开已保存', 'Open saved plans'), 'text')}</div>`;
+  document.querySelector('#input-form').addEventListener('submit', generate);
+}
+
+function generate(event) {
+  event.preventDefault();
+  inputDraft = draftFromForm();
+  try {
+    session = { input: inputDraft, plans: provider.plan(inputDraft), index: 0,
+      statuses: ['pending', 'pending', 'pending', 'pending'], updated: new Date().toISOString() };
+    reactions.clear();
+    savedId = undo = undefined;
+    preview = false;
+    navigate('steps');
+  } catch {
+    error(l('请选择内置故事、年龄和时间。Lite 不处理自由故事。', 'Choose a library story, age, and duration. Lite cannot process other stories.'));
+  }
+}
+
+function stepContent(step, full = false) {
+  const fallback = `<div class="fallback"><strong>${l('孩子不想说或不想参与？', 'Rather not talk or join in?')}</strong><br>“${escape(step.fallback)}”</div>`;
+  return `<p>${escape(step.action)}</p>
+    ${step.id === 'read' ? `<details open class="source"><summary>${l('故事原文或简述', 'Original story or summary')}</summary><p class="story">${escape(provider.storyFor(session.input)[language].story)}</p></details>` : ''}
+    ${step.question ? `<div class="callout"><span class="eyebrow">${l('可以问一句', 'Try one question')}</span><p class="quote">“${escape(step.question)}”</p></div>` : ''}
+    ${step.id === 'talk' ? fallback : ''}
+    <h3>${l('你可以这样说', 'You could say')}</h3><p class="quote">“${escape(step.say)}”</p>
+    ${step.id !== 'talk' ? fallback : ''}
+    ${step.materials.length ? `<p class="muted">${l('材料', 'Supplies')} · ${step.materials.map(materialLabel).map(escape).join(l('、', ', '))}</p>` : ''}
+    ${step.backups.length ? `<details ${full ? 'open' : ''}><summary>${l('备用问题', 'Optional follow-up questions')}</summary>${step.backups.map(q => `<p>${escape(q)}</p>`).join('')}</details>` : ''}
+    ${step.evidence.length ? `<details ${full ? 'open' : ''}><summary>${l('核对故事依据', 'Check the story reference')}</summary>${step.evidence.map(q => `<p>“${escape(q)}”</p>`).join('')}</details>` : ''}`;
+}
+
+function reactionPanel(step) {
+  if (step.id === 'close') return '';
+  const state = reactions.get(step.id);
+  const suggestion = state?.suggestions?.[language];
+  const ending = ['pause', 'stop'].includes(suggestion?.method);
+  return `<details class="reaction-panel" ${state ? 'open' : ''}>
+    <summary>${l('孩子是什么反应？', 'How did your child respond?')}</summary>
+    ${suggestion ? `<div class="callout" role="status" tabindex="-1" id="reaction-result">
+      <p class="tiny">${sourceLabel()}</p><h3>${escape(suggestion.title)}</h3><p>${escape(suggestion.activity)}</p><p>“${escape(suggestion.say)}”</p></div>` : ''}
+    ${suggestion && !ending && !state.tried.includes(suggestion.method) ? button('mark-tried', l('我试过这招', 'I tried this'), 'text') : ''}
+    ${suggestion && !ending ? button('reaction', l('还是没用', 'Still not working'), '', 'data-reaction="retry"') : ''}
+    ${ending ? `<div class="secondary">${button('end', l('结束这次共读', 'End this read-aloud'))}</div>` : `
+    <details class="reaction-options" ${suggestion ? '' : 'open'}><summary>${l('选择现场反应', 'Choose what happened')}</summary>
+      <div class="choices">${reactionOptions.map(([value, zh, en]) => button('reaction', l(zh, en), '', `data-reaction="${value}"`)).join('')}</div>
+    </details>`}
+  </details>`;
+}
+
+function stepPage() {
+  const index = session.index;
+  const step = current();
+  const optional = step.id === 'play' && step.minutes > 0 && !session.playStarted;
+  const back = button('prev', l('上一步', 'Back'), optional ? 'text' : '', index === 0 ? 'disabled' : '');
+  const end = button('end', l('今天到这里', 'Finish for today'), optional ? '' : 'text');
+  app.innerHTML = `<div class="statusline"><span>${escape(plans().title)}</span><span>${l(`第 ${index + 1} 步 / 4`, `Step ${index + 1} of 4`)}</span></div>
+    <div class="progress" aria-hidden="true">${plans().steps.map((_, i) => `<span class="${i === index ? 'current' : i < index ? 'passed' : ''}"></span>`).join('')}</div>
+    <p class="eyebrow">${sourceLabel()} · ${session.compact ? l('约 5 分钟剩余安排', 'About 5 minutes from this point') : `${years(session.input.age)} · ${minute(session.input.minutes)}`} · ${minute(step.minutes)}</p>
+    <h1 tabindex="-1">${escape(step.title)}</h1>
+    ${step.id === 'play' ? `<p class="intro">${l('这是可选的小活动。已经聊够的话，可以直接结束。', 'This activity is optional. If you’ve had enough, you can finish now.')}</p>` : ''}
+    <div class="panel">${stepContent(step)}${reactionPanel(step)}</div>${errorBlock}
+    <div class="buttons">${optional ? button('play', l('开始小活动', 'Start the activity'), 'primary') + end :
+      back + button('next', index === 3 ? l('结束共读', 'Finish reading') : l('下一步', 'Next'), 'primary')}</div>
+    <div class="secondary">${optional ? back : ''}
+      ${button('skip', l('跳过这步', 'Skip this step'), 'text')}${button('edit', l('改这一步', 'Edit this step'), 'text')}
+      ${session.input.minutes === 10 && !session.compact ? button('compact', l('5 分钟简版', '5-minute version'), 'text') : ''}
+      ${optional ? '' : end}${undo ? button('undo', l('撤销最近一次修改', 'Undo last change'), 'text') : ''}
+    </div><div id="edit-slot"></div>
+    <p class="tiny">${l('时间只是参考。想停就停。', 'Times are estimates. Stop whenever you like.')}</p>`;
+  if (edit) showEdit();
+}
+
+function showEdit() {
+  const slot = document.querySelector('#edit-slot');
+  slot.innerHTML = `<section class="edit-panel"><h2>${l('只改当前这一步', 'Change just this step')}</h2>
+    <label for="edit-choice">${l('怎么改？', 'What would you change?')}</label>
+    <select id="edit-choice">
+      <option value="simple" ${edit.choice === 'simple' ? 'selected' : ''}>${l('话说简单点', 'Simpler words')}</option>
+      ${current().id === 'play' ? `<option value="show" ${edit.choice === 'show' ? 'selected' : ''}>${l('由家长先示范', 'Let the parent show first')}</option>` : ''}
+    </select>
+    <div class="buttons">${button('try-edit', l('预览改写', 'Preview change'))}${button('cancel-edit', l('取消', 'Cancel'))}</div>
+    ${edit.candidate ? `<hr><h3>${l('修改前', 'Before')}</h3><p>${escape(current().say)}</p>
+      <p class="tiny">${sourceLabel()}</p><h3>${l('修改后', 'After')} · ${escape(edit.candidate[language].title)}</h3>${stepContent(edit.candidate[language])}
+      <div class="buttons">${button('apply-edit', l('采用这版', 'Use this change'), 'primary')}${button('cancel-edit', l('保留原版', 'Keep the original'))}</div>` : ''}
+  </section>`;
+  slot.querySelector('select').addEventListener('change', event => {
+    edit.choice = event.target.value;
+    if (edit.candidate) { edit.candidate = null; showEdit(); slot.querySelector('select').focus(); }
+  });
+}
+
+function previewHTML() {
+  return `<div class="print-only"><h1>${escape(plans().title)}</h1><p>${sourceLabel()} · ${years(session.input.age)} · ${session.compact ? l('5 分钟简版', '5-minute version') : minute(session.input.minutes)}</p></div>
+    ${plans().steps.map((step, i) => `<section class="preview-step">
+      <h2>${escape(step.title)} · ${minute(step.minutes)}</h2><p class="muted">${sourceLabel()} · ${status(session.statuses[i])}</p>
+      ${stepContent(step, true)}</section>`).join('')}`;
+}
+
+function endPage() {
+  app.innerHTML = `<div class="screen-only"><h1 tabindex="-1">${l('今天，读到这里也很好。', 'That’s a good place to stop.')}</h1>
+    <p>${l('这里记的是页面进度。', 'Here’s where you left off.')}</p>
+    <div class="panel">${plans().steps.map((step, i) => `<p>${escape(step.title)} <span class="tag">${status(session.statuses[i])}</span></p>`).join('')}</div>
+    ${errorBlock}<div class="buttons">${button('save', savedId ? l('更新本机保存', 'Update saved plan') : l('保存到本机', 'Save on this device'), 'primary')}
+      ${button('resume', l('回到刚才步骤', 'Return to your step'))}</div>
+    <p class="tiny">${l('只有点保存才写入此浏览器。清除浏览器数据可能丢失。', 'Plans are stored in this browser only when you save. Clearing browser data may remove them.')}</p>
+    <div class="secondary">${button('preview', preview ? l('收起预览', 'Hide preview') : l('完整预览', 'Full preview'), 'text')}
+      ${button('print', l('打印／存为 PDF', 'Print / Save as PDF'), 'text')}${button('list', l('本机保存列表', 'Saved plans'), 'text')}
+      ${button('new', l('开始新的共读', 'Start a new read-aloud'), 'text')}</div></div>
+    <div id="preview">${preview ? previewHTML() : ''}</div>`;
+}
+
+async function listPage() {
+  app.innerHTML = `<h1 tabindex="-1">${l('本机保存', 'Saved plans')}</h1>
+    <p class="muted">${l('只保存在当前设备和浏览器。', 'Available in this browser on this device.')}</p>
+    ${errorBlock}<div id="saved-list" aria-live="polite">${l('正在读取…', 'Loading…')}</div>${button('back-list', l('返回', 'Back'))}`;
+  const list = document.querySelector('#saved-list');
+  try {
+    const items = await store('readonly', object => object.getAll());
+    if (!list.isConnected) return;
+    list.innerHTML = items.length ? items.sort((a, b) => b.updated.localeCompare(a.updated)).map(record => `<article class="saved">
+      <h2>${escape(record.plans[language].title)}</h2><p class="tag">${years(record.input.age)} · ${escape(new Date(record.updated).toLocaleString(locale()))}</p>
+      <div class="buttons">${button('open', l('继续查看', 'Open plan'), '', `data-id="${escape(record.id)}"`)}
+        ${button('delete', l('删除', 'Delete'), 'danger', `data-id="${escape(record.id)}"`)}</div></article>`).join('') :
+      `<p class="panel">${l('还没有保存的方案。', 'No saved plans yet.')}</p>`;
+  } catch (err) { if (list.isConnected) { list.textContent = ''; error(err.message); } }
+}
+
+function render() {
+  if (page === 'input') inputPage();
+  if (page === 'steps') stepPage();
+  if (page === 'end') endPage();
+  if (page === 'list') listPage();
+}
+
+function navigate(target) {
+  page = target;
+  edit = undefined;
+  render();
+  focusPage();
+}
+
+function renderLanguage() {
+  document.documentElement.lang = locale();
+  document.title = l('共读活动工坊 Lite', 'Read-Aloud Activity Workshop Lite');
+  document.querySelector('#brand').textContent = l('谷知了', 'Gu Zhi Liao');
+  document.querySelector('#workshop-name').textContent = document.title;
+  document.querySelector('footer').textContent = l(
+    '面向家长和监护人。请根据孩子的情况调整建议。内容不构成医疗、心理诊断或教育效果保证。',
+    'For parents and caregivers. Adapt suggestions to your child. The tool does not provide medical or psychological advice or guarantee learning outcomes.');
+  languagePicker.querySelectorAll('button').forEach(item => item.setAttribute('aria-pressed', item.dataset.language === language));
+  render();
+}
+
+languagePicker.addEventListener('click', event => {
+  const target = event.target.closest('button[data-language]');
+  if (busy || !target || target.dataset.language === language) return;
+  if (page === 'input') inputDraft = draftFromForm();
+  const scroll = window.scrollY;
+  chooseLanguage(target.dataset.language);
+  tell('');
+  renderLanguage();
+  window.scrollTo(0, scroll);
+});
+
+app.addEventListener('click', async event => {
+  const target = event.target.closest('button[data-action]');
+  if (!target || busy) return;
+  const action = target.dataset.action;
+  tell('');
+  try {
+    if (action === 'list') {
+      if (page === 'input') inputDraft = draftFromForm();
+      listOrigin = page;
+      navigate('list');
+    }
+    if (action === 'back-list') navigate(listOrigin);
+    if (action === 'play') { session.playStarted = true; render(); }
+    if (action === 'prev') { session.index--; navigate('steps'); }
+    if (action === 'next' || action === 'skip') {
+      session.statuses[session.index] = action === 'skip' ? 'skipped' : 'viewed';
+      if (session.index === 3) navigate('end');
+      else { session.index++; navigate('steps'); }
+    }
+    if (action === 'end') navigate('end');
+    if (action === 'resume') navigate('steps');
+    if (action === 'mark-tried') {
+      const state = reactions.get(current().id);
+      if (state?.suggestions) {
+        state.tried = [...new Set([...state.tried, state.suggestions.zh.method])];
+        render();
+        document.querySelector('#reaction-result').focus();
+        tell(l('已记下这个方法。', 'Marked as tried.'));
+      }
+    }
+    if (action === 'reaction') {
+      const id = current().id;
+      const state = reactions.get(id) ?? { tried: [] };
+      const reason = target.dataset.reaction;
+      const tried = [...new Set(reason === 'retry' && state.suggestions
+        ? [...state.tried, state.suggestions.zh.method] : state.tried)];
+      const suggestions = provider.reaction({ input: session.input, stepId: id, reason, tried });
+      reactions.set(id, { tried, suggestions });
+      render();
+      document.querySelector('#reaction-result').focus();
+    }
+    if (action === 'edit') {
+      edit = { choice: 'simple' };
+      showEdit();
+      document.querySelector('#edit-choice').focus();
+    }
+    if (action === 'cancel-edit') { edit = undefined; document.querySelector('#edit-slot').innerHTML = ''; }
+    if (action === 'try-edit') {
+      edit.candidate = provider.revise({ input: session.input, plans: session.plans, index: session.index, choice: edit.choice });
+      showEdit();
+      document.querySelector('[data-action="apply-edit"]').focus();
+    }
+    if (action === 'apply-edit') {
+      undo = { index: session.index, plans: structuredClone(session.plans), compact: session.compact };
+      for (const code of ['zh', 'en']) session.plans[code].steps[session.index] = edit.candidate[code];
+      // Retain tried methods through local edits of the same step.
+      const state = reactions.get(current().id);
+      if (state?.suggestions) reactions.set(current().id, { tried: [...state.tried] });
+      edit = undefined;
+      render();
+      tell(l('只改了当前步骤。', 'Only this step changed.'));
+    }
+    if (action === 'compact') {
+      undo = { index: session.index, plans: session.plans, compact: session.compact };
+      session.plans = provider.compact({ input: session.input, plans: session.plans, index: session.index });
+      session.compact = true;
+      edit = undefined;
+      render();
+    }
+    if (action === 'undo') {
+      Object.assign(session, undo);
+      undo = edit = undefined;
+      render();
+    }
+    if (action === 'preview' || action === 'print') {
+      preview = action === 'print' || !preview;
+      endPage();
+      if (action === 'print') window.print();
+    }
+    if (['save', 'open', 'delete'].includes(action)) {
+      busy = true;
+      target.disabled = true;
+    }
+    if (action === 'save') {
+      const id = savedId || Array.from(crypto.getRandomValues(new Uint8Array(16)), n => n.toString(16).padStart(2, '0')).join('');
+      await store('readwrite', object => object.put({ ...structuredClone(session), reactionHistory: Object.fromEntries(reactions), id, updated: new Date().toISOString() }));
+      savedId = id;
+      endPage();
+      tell(l('已保存到此浏览器。', 'Saved in this browser.'));
+    }
+    if (action === 'open') {
+      const record = await store('readonly', object => object.get(target.dataset.id));
+      if (!record?.plans?.zh || !record.plans.en) return error(l('找不到这份保存记录。', 'This saved plan couldn’t be found.'));
+      session = record;
+      savedId = record.id;
+      undo = undefined;
+      reactions.clear();
+      for (const [id, state] of Object.entries(record.reactionHistory ?? {})) reactions.set(id, state);
+      navigate('steps');
+    }
+    if (action === 'delete' && confirm(l('删除这份本机记录？', 'Delete this saved plan?'))) {
+      await store('readwrite', object => object.delete(target.dataset.id));
+      if (savedId === target.dataset.id) savedId = undefined;
+      render();
+    }
+    if (action === 'new' && confirm(l('开始新的共读？请先保存需要保留的方案。', 'Start a new read-aloud? Save this plan first if you want to keep it.'))) {
+      session = inputDraft = savedId = undo = undefined;
+      preview = false;
+      reactions.clear();
+      navigate('input');
+    }
+  } catch (err) {
+    error(l('这一步没有完成。请重试，当前方案还在。', 'This action didn’t finish. Try again. Your current plan is still here.'));
+  } finally {
+    busy = false;
+    if (target.isConnected) target.disabled = false;
+  }
+});
+
+renderLanguage();
+
+})();</script>
+</body>
+</html>

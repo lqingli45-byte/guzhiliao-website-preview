@@ -12,7 +12,7 @@
     "fullStories": 8,
     "page": "product-gongdu-workshop.html",
     "englishPage": "en/product-read-aloud-workshop.html",
-    "trial": "lite/",
+    "trial": "demo/index.html",
     "productType": "offline-digital-download",
     "price": {
       "amount": "4.90",
