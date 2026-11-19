@@ -1,20 +1,29 @@
 {
   "brandName": "谷知了",
   "brandNameEn": "Gu Zhi Liao",
-  "tagline": "把 AI 做成真正能用的数字工具",
   "businessEmail": "lqingli45@gmail.com",
   "publicBaseUrl": "https://lqingli45-byte.github.io/guzhiliao-website-preview/",
-  "githubRepo": "https://github.com/lqingli45-byte/guzhiliao-website-preview",
-  "status": "independent-preview-v0.3-bilingual-simulated-not-official",
-  "checkoutEnabled": false,
+  "status": "public-product-preview",
   "firstProduct": {
-    "provisionalName": "共读活动工坊",
-    "status": "v0.3-bilingual-simulated-prototype-real-ai-not-connected-not-available-for-purchase",
+    "name": "共读活动工坊 Lite 1.0",
+    "nameEn": "Read-Aloud Activity Workshop Lite v1.0",
+    "version": "1.0",
+    "freeStories": 1,
+    "fullStories": 8,
     "page": "product-gongdu-workshop.html",
-    "experienceButton": "reserved-试用演示-Try-the-Demo-not-connected",
-    "experienceUrl": null,
-    "englishName": "Read-Aloud Activity Workshop",
-    "englishPage": "en/product-read-aloud-workshop.html"
-  },
-  "notes": "This copy is the independent preview at https://lqingli45-byte.github.io/guzhiliao-website-preview/ and must not be published to the official repository lqingli45-byte/guzhiliao-website. Canonical, og:url and publicBaseUrl point only to this preview host. Preview pages use noindex,nofollow and robots.txt Disallow. Current product status is V0.3 bilingual simulated prototype: implemented features use preset stories and simulated responses; real AI is not connected; 试用演示 / Try the Demo and purchase stay reserved. Do not invent prices, billing, quotas, post-purchase access, delivery, purchase regions, or after-sales rules. Do not enable checkout, connect a payment provider, or submit merchant review."
+    "englishPage": "en/product-read-aloud-workshop.html",
+    "trial": "lite/",
+    "productType": "offline-digital-download",
+    "price": {
+      "amount": "4.90",
+      "currency": "USD",
+      "billing": "one-time",
+      "status": "proposed"
+    },
+    "checkout": {
+      "enabled": false,
+      "url": null,
+      "plannedDelivery": "Dodo Payments Digital Files"
+    }
+  }
 }

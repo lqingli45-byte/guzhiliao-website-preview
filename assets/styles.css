@@ -462,3 +462,27 @@ html[lang="en"] .btn-note { max-width: 40rem; }
   .reaction-flow li,
   .steps li { grid-template-columns: 40px 1fr; gap: 12px; padding: 16px; }
 }
+
+/* Lite product previews reuse the site cards, colors and spacing. */
+.lite-price strong { color: var(--green-deep); }
+.lite-home-shot,
+.lite-gallery figure { margin: 0; }
+.lite-home-shot { justify-self: center; width: min(100%, 280px); }
+.lite-home-shot img,
+.lite-gallery img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+}
+.lite-home-shot figcaption,
+.lite-gallery figcaption { margin-top: 8px; color: var(--muted); }
+.lite-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 240px), 330px));
+  gap: 20px;
+}
+.faq-list details { padding: 12px 0; border-bottom: 1px solid var(--line); }
+.faq-list summary { cursor: pointer; font-weight: 600; }
+.faq-list details p { margin: 8px 0 0; color: var(--muted); }

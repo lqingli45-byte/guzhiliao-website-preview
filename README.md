@@ -1,5 +1,5 @@
-# Independent preview only
+# Gu Zhi Liao product preview
 
-This folder is an unpublished public-preview copy of the 谷知了 website draft.
-Do not publish it to lqingli45-byte/guzhiliao-website or the official GitHub Pages site.
-It includes a preview banner and noindex/nofollow so it is not treated as the official site.
+The independent GitHub Pages preview contains bilingual product and policy pages and an interactive, one-story free trial at `lite/`. The free trial is a standalone file from the Lite 1.0 release. Its screenshots in `assets/lite/` show the public story only.
+
+To preview locally, serve this directory with `python3 -m http.server 4318` and visit `http://localhost:4318/`. GitHub Pages serves the root of `main`. This preview has a proposed one-time price and keeps checkout disabled. The full eight-story download is stored separately for private fulfillment.
